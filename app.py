@@ -13,8 +13,8 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html', image=images.image, mask=images.mask)
 
-@app.route('/images', methods=['POST'])
-def upload():
+@app.route('/run', methods=['POST'])
+def run():
 	image_data = base64.b64decode(request.form['image'])
 	mask_data = base64.b64decode(request.form['mask'])
 
