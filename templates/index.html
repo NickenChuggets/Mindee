@@ -1,0 +1,15 @@
+<form method="POST" action="/images">
+	<div>
+		<img src="data:image/jpeg;base64,{{ image }}" alt="image">
+		<img src="data:image/jpeg;base64,{{ mask }}" alt="mask">
+		<input type="hidden" name="image" value="{{ image }}">
+		<input type="hidden" name="mask" value="{{ mask }}">
+	</div>
+	<button type="submit">Envoyer</button>
+</form>
+<style type="text/css">
+	img {
+		max-width: 15em;
+		max-height: 15em;
+	}
+</style>
